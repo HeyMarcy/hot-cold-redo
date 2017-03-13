@@ -3,18 +3,18 @@ require('babel-polyfill');
 import * as actions from './actions/index';
 
 
-function GenerateRandomNumber() {
-
-}
+const randomNumGenerator = function randomNumGenerator() {
+	return Math.floor(Math.random() *100) +1;
+};
 
 
 
 const initialHotColdAppState = {
 	temperture:['Make your guess'],
-	randomNumber: randomNumber,
+	randomNumber: 'randomNumber',
 	GuessNumber: 0,
 	GuessHistory: [],
-	DescriptionData:
+	// DescriptionData:
 
 
 };

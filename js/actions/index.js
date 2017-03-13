@@ -18,7 +18,7 @@ export const guessNumber = number => ({
 
 
 export const ENTER_NUMBER_DATA = 'ENTER_NUMBER_DATA';
-export const Input_number = (num) => ({
+export const Input_number = (value) => ({
     type: ENTER_NUMBER_DATA,
     value
     
@@ -27,7 +27,7 @@ export const Input_number = (num) => ({
 
 
 export const START_NEW_GAME_BTN = 'START_NEW_GAME_BTN';
-export const NewGame = (num) => ({
+export const NewGame = () => ({
     type: START_NEW_GAME_BTN,
     
     
@@ -36,7 +36,7 @@ export const NewGame = (num) => ({
 
 
 export const WHAT_DESCRIPTION_BTN = 'WHAT_DESCRIPTION_BTN';
-export const decriptionBtn = (state) => ({
+export const decriptionBtn = () => ({
     type: WHAT_DESCRIPTION_BTN,
     
     
