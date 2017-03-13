@@ -1,43 +1,20 @@
 require('babel-polyfill');
 
+import {createStore} from 'redux';
+
+import * as reducers from './reducers/index';
 import * as actions from './actions/index';
 
+const store = createStore(reducers.hotColdReducer);
 
-const randomNumGenerator = function randomNumGenerator() {
-	return Math.floor(Math.random() *100) +1;
-};
+store.dispatch(actions.NewGame());
+store.dispatch(actions.submitNumber(4));
+console.log(store.getState());
+store.dispatch(actions.submitNumber(2));
+console.log(store.getState());
 
-
-
-const initialHotColdAppState = {
-	temperture:['Make your guess'],
-	randomNumber: 'randomNumber',
-	GuessNumber: 0,
-	GuessHistory: [],
-	// DescriptionData:
+store.dispatch(actions.NewGame());
+store.dispatch(actions.submitNumber(42));
 
 
-};
-
-
-
-export const repositoryReducer = (state=initialRepositoryState, action) => {
-
-    if (action.type === guessNumber) {
-        return [...state, {
-            guessNumber: action.guessNumber
-        }];
-    }
-    
-
-
-
-
-
-
-
-
-
-
-    return state;
-};
+console.log(store.getState());
