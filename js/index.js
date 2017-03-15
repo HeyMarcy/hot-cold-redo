@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () =>
       <Provider store={store}>
         <Game />
       </Provider>,
-      document.getElementById('app'))
+    document.getElementById('app'))
 );
 
 
